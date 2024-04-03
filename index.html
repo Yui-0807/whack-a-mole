@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a mole</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div ></div>
+
+    <div class="start-container">
+        <h1>Whack a mole</h1>
+        <button id="btn-start">start</button>
+    </div>
+
+    <div class="legend">
+        <h2>how to play</h2>
+        <p>Click on moles to score 5 points and watch out for tricky rabbits - they give you 10 points, but some take away 15. Beat the timer and aim for the highest score!</p>
+        <img src="images/tips.png" alt="tips">
+        <button id="btn-legend">ok</button>
+    </div>
+
+    <div class="game-container">
+
+        <div class="game-board-top">
+            <div class="game-btn">
+                <img src="images/replay_FILL0_wght400_GRAD0_opsz24.svg" alt="restart icon" id="restart">
+                <img src="images/pause_FILL1_wght400_GRAD0_opsz24.svg" alt="playpause icon" id="playPause">
+            </div>
+
+            <div id="score">
+                <h2> score: </h2>
+                <span id="score-out">0</span>
+            </div>
+            <div id="time">
+                <h2 id="time-out">40s</h2>
+            </div>
+        </div>
+
+        
+
+        <!-- 3x3 gameboard-->
+        <div id="game-board">
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
+            <div id="6"></div>
+            <div id="7"></div>
+            <div id="8"></div>
+            <div id="9"></div>
+        </div>
+
+    </div>
+
+    <div class="custom-cursor"></div>
+
+
+    <div class="time-out-container">
+        <h2>score</h2>
+        <div id="final-score">0</div>
+        <img src="images/replay_FILL0_wght400_GRAD0_opsz24.svg" alt="restart icon">
+    </div>
+
+</body>
+
+</html>

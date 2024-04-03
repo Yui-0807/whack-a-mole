@@ -1,0 +1,306 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+
+}
+
+h1,
+h2 {
+    color: #493928;
+   
+}
+
+p {
+    color: #493928;
+    font-size: 1rem;
+    padding: .5rem;
+    margin: 1rem;
+    line-height: 1.5;
+}
+
+span {
+    color: #493928;
+    font-size: 3.5rem;
+    margin: 2.5rem;
+}
+
+
+/* start container */
+
+h1 {
+
+    text-shadow: 10px 0px #ead8c4;
+    font-size: 10rem;
+    margin: 2.5rem;
+}
+
+.start-container {
+    display: block;
+    position: absolute;
+    top: 15rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    backdrop-filter: blur(2px);
+
+}
+
+.legend {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 40rem;
+    height: fit-content;
+    background-color: #ead8c4;
+    
+    border-radius: 16px;
+
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+}
+
+.legend h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+
+.legend p {
+    text-align: left;
+    font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+}
+
+.legend img {
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+#btn-start,
+.legend button {
+    
+    padding: 1rem 3rem;
+    margin: 0 auto;
+    
+    color: white;
+    font-size: 3rem;
+    border: #493928 solid 3px;
+    border-radius: 16px;
+    background-color: #493928;
+
+}
+
+#btn-start:hover,
+.legend button:hover {
+    color: #493928;
+    background-color: white;
+}
+
+
+/* gameboard */
+.game-container {
+    display: none;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.game-board-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+    margin: 0 auto;
+}
+
+.game-btn {
+    display: flex;
+    width: 10%;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.game-board-top img {
+    width: 100%;
+    background-color: #ead8c4;
+    padding: .5rem;
+    border-radius: 50%;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.game-board-top img:hover {
+    background-color: white;
+}
+
+.game-board-top h2 {
+    font-size: 3rem;
+}
+
+#score {
+    display: flex;
+}
+
+#time {
+    display: flex;
+}
+
+#time-out {
+    font-size: 3rem;
+}
+
+#game-board {
+    width: 600px;
+    height: 600px;
+    background-color: #967959;
+
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 3px solid white;
+    border-radius: 25px;
+
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    right: 0;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#game-board div {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 46%;
+    clip-path: ellipse(150px 138px at 50% 25%);
+    background-image: url(../images/hole.png);
+    background-size: cover;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#game-board img {
+    width: 200px;
+    pointer-events: auto;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: rise 1s ease-in-out;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateX(-50%) translateY(100%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0%);
+    }
+}
+
+
+/* time out container */
+.time-out-container {
+    display: none;
+    position: absolute;
+    top: 11rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 1rem;
+    max-width: 35rem;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.time-out-container h2 {
+    color: #493928;
+    font-size: 5rem;
+    margin: 2.5rem;
+}
+
+#final-score {
+    color: #493928;
+    font-size: 8rem;
+    margin: 0 auto;
+    padding: 7rem;
+    border-radius: 16px;
+}
+
+
+.time-out-container img {
+    width: 15%;
+    max-width: 10rem;
+    
+    padding: .5rem;
+    border-radius: 50%;
+    margin-bottom: 2.5rem;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.time-out-container img:hover {
+    background-color: #ead8c4;
+}
+
+.custom-cursor {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+
+    width: 110px;
+    height: 100px;
+
+    background-image: url('../images/hammer.png');
+    background-size: cover;
+
+    pointer-events: none;
+    transform: translate(-30%, -40%);
+    transition: transform 0.1s;
+
+    opacity: 0;
+
+}
+
+.custom-cursor.active {
+    transform: translate(-30%, -40%) rotate(-90deg);
+}
